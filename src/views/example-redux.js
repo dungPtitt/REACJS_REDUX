@@ -3,22 +3,26 @@ import { connect } from 'react-redux';
 
 class ExampleRedux extends React.Component {
   handleDeletePlace = (place) => {
+    console.log('delete from react', place)
     this.props.delelePlace(place)
+  }
+  handleCreatePlace = () => {
+    this.props.createPlace();
   }
   render() {
     let places = this.props.dataRedux;
     return (
-      <div className="place-list">
-        {places && places.length > 0 &&
-          places.map((item, id) => {
-            return (
-              <>
-                <h3 key={item.id}>{id + 1}. {item.title} <span onClick={() => this.handleDeletePlace(item)}>x</span></h3>
-              </>
-            )
-          })
-        }
-      </div>
+      <>
+        <div className="place-list">
+          {places && places.length > 0 &&
+            places.map((item, id) => {
+              return <div key={item.id}>{id + 1}. {item.title} <span onClick={() => this.handleDeletePlace(item)}>x</span></div>
+            })
+          }
+          <button onClick={() => this.handleCreatePlace()}>Add new Place</button>
+        </div>
+      </>
+
     )
   }
 }
@@ -34,9 +38,9 @@ let mapDispatchToProps = (dispatch) => {
     delelePlace: (place) => {
       dispatch({ type: 'DELETE_PLACE', payload: place })
     },
-    // createPlace: () => {
-    //   dispatch({ type: 'CREARE_PLACE' })
-    // }
+    createPlace: () => {
+      dispatch({ type: 'CREATE_PLACE' })
+    }
   }
 }
 
