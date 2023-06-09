@@ -15,10 +15,12 @@ function App() {
         <h3>nhanh cua dunglv</h3>
         <div>the div cua dunglv</div>
         <h3>nhanh cua dung</h3>
+        <div>add</div>
 
+        <div>add</div>
         <h3> them cac chuc nang cua dung</h3>
         <div>bala bla</div>
-
+        <div>add</div>
         <ExampleRedux />
       </header>
     </div>
