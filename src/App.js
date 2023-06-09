@@ -12,6 +12,9 @@ function App() {
         </h2>
 
         <h3>nhanh cua dung</h3>
+
+        <h3> them cac chuc nang cua dung</h3>
+        <div>bala bla</div>
         <ExampleRedux />
       </header>
     </div>
