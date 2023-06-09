@@ -10,7 +10,8 @@ function App() {
         <h2>
           Danh sách địa điểm lưu diễn của band:
         </h2>
-        <h3>nhanh cua dunglv</h3>
+
+        <h3>nhanh cua dung</h3>
         <ExampleRedux />
       </header>
     </div>
